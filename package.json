@@ -4,11 +4,13 @@
   "description": "project to help me ",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index"
+    "start": "node index",
+    "dev":"nodemon index"
   },
   "author": "Flavio",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3"
   }
 }
