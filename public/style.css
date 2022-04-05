@@ -1,3 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+
 body{
-    background:rgba(180, 167, 167, 0.171);
+    background:#24222e;
+    width:100%;
+    height:100%;
+}
+header{
+    background:#6cc7ca;
+    padding:3rem;
+    margin:.5rem;
+    border-radius:8px;
+    text-align: center;
+    
+}
+header h1{
+    padding-bottom:.3rem;
+}
+img{
+    width: 65px;
+    height:65px;
+}
+input{
+    margin:0;
+    border:none;
+    border-radius:4px;
+    outline: none;
+    width:75%;
+    font-size:1rem;
+    background:#24222e; 
+    color:whitesmoke;
+    height: 36px;
+}
+input::placeholder{
+    text-align: center;
+}
+
+button{
+    height:35px;
+    padding:.6rem;
+    width:20%;
+    background:#24222e; 
+    color:white;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border:none;
+}
+section#tasks{
+    margin:5rem;
+}
+ul{  
+  list-style: none;
+  border:1px solid rgba(255, 255, 255, 0.288);
+}
+ul li {
+    position: relative;
+    padding:0 2rem 0 1rem;
+    background:#433f57; 
+    text-decoration: none;
+    padding:1rem;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+ul li p{
+    text-decoration: none;
+    color:#fff;
+    color:rgb(247, 247, 247);
+}
+ul li p span{
+    color:rgb(252, 252, 252);
+    font-style: italic;
+}
+ul li div{
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+ul li:nth-child(odd){
+    background:rgb(13, 14, 14);
+}
+ul li:hover{
+    background:rgba(15, 17, 19, 0.514);
+    cursor: pointer;
+}
+a.btnUpdate{
+    padding:.5rem;
+    color:white;
+    transition: all .3s ease-in-out;
+}
+a.btnUpdate:hover{
+    color:rgb(43, 40, 40);
+    background:#1d814f
+}
+a.btnDelete{
+    padding:.5rem;
+    color:white;
+    transition: all .3s ease-in-out;
+}
+a.btnDelete:hover{
+    color:gray;
+    background:#bb3703
+}
+
+section#modal{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #00000085;
+    z-index:9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#modal #card{
+    background:#2f7c55;
+    width:30rem;
+    position: relative;
+    border:1px solid rgb(230, 230, 230);
+}
+div#header{
+    display:flex;
+}
+#card h2{
+    padding:2rem;
+    margin:0;
+    color:black;
+}
+div#card hr {
+    width:80%;
+    margin:0 auto;
+    border-color:#24222e
+}
+div#card p {
+    padding:1.5rem;
+}
+div#card a  {
+    
+    font-style:bold;
+    
+}
+#close{
+    position:absolute;
+    right:0;
+    top:.7rem;
+    padding:1.2rem;
+    color:white;
+    text-decoration: none;
+}
+.btns{
+    display:flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+.btns a{
+    margin: 0.4rem;
+    text-decoration: none;
+    background:rgba(44, 46, 54, 0.979);
+    padding:.8rem;
+    border-radius:.4rem;
+}
+.btnNot{
+    color:red;
+}
+.btnYes{
+    color:green;
+}
+.message{
+    padding:1rem;
+    position: sticky;
+    background:#4d4670;
+    top:2px;
+    z-index:9999;
+    text-align: center;
+    font-size:1.1rem;
+    font-weight: bold;
+    width:auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.message-danger{
+    background-color: rgba(255,197,197);
+    color:tomato;
+}
+.message-success{
+    background-color: rgb(30, 129, 30);
+    color:rgb(5, 12, 5);
+}
+span#close-message{
+    font-size:2rem;
+    cursor:pointer;
+    transition: .3s;
+    padding-left: 2rem;
+}
+span#close-message:hover{
+    color:#bb3703
+}
+ul li .check-true{
+    
+    color:white;
+    text-decoration: line-through;
+}
+ul li a{
+    text-decoration: none;
+    padding-left:2rem;
+    color:white;
+}
+ul li a.check-true::before{
+    content:"";
+    position: absolute;
+    border: rgb(46, 156, 170) solid;
+    top:17px;
+    left:16px;
+    height:15px;
+    width:7px;
+    border-width:  0 2px 2px 0;
+    transform:rotate(45deg);
+   
+}
+ul li a.check-false::before{
+    content:"";
+    position: absolute;
+    border: rgb(46, 156, 170) solid;
+    top:15px;
+    left:16px;
+    height:15px;
+    width:15px;
+    border-width:  2px;
+    
 }
